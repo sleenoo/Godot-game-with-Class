@@ -1,14 +1,20 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Project Tileset/Sprites/Wizard player.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
+[ext_resource path="res://Project Tileset/Tileset/Untitled 08-15-2022 05-54-00 (1).png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30.5, 51.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 30.5, 30 )
 
 [node name="World" type="Node2D"]
 
 [node name="Player" type="KinematicBody2D" parent="."]
 position = Vector2( 486, 201 )
+script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Player"]
 texture = ExtResource( 1 )
@@ -21,3 +27,15 @@ shape = SubResource( 1 )
 current = true
 zoom = Vector2( 0.5, 0.5 )
 smoothing_enabled = true
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2( 489.5, 189.5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2( 0, 81.5 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Ground"]
+position = Vector2( 0.5, 82.5 )
+scale = Vector2( 0.119629, 0.119629 )
+texture = ExtResource( 3 )
