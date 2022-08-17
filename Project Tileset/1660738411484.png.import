@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Wizard player.png-1df132d6453a4ccc6e4d61953173e0f0.stex"
+path="res://.import/1660738411484.png-b84793c585b63c7e08f4701a58fe5c63.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Project Tileset/Sprites/Wizard player.png"
-dest_files=[ "res://.import/Wizard player.png-1df132d6453a4ccc6e4d61953173e0f0.stex" ]
+source_file="res://Project Tileset/1660738411484.png"
+dest_files=[ "res://.import/1660738411484.png-b84793c585b63c7e08f4701a58fe5c63.stex" ]
 
 [params]
 
