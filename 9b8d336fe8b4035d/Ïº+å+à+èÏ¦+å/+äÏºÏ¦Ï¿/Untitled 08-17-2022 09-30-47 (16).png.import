@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Untitled 08-17-2022 09-30-47 (16).png-32a2bd7f748ca504d33420fb3ac13518.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://9b8d336fe8b4035d/Ïº+å+à+èÏ¦+å/+äÏºÏ¦Ï¿/Untitled 08-17-2022 09-30-47 (16).png"
+dest_files=[ "res://.import/Untitled 08-17-2022 09-30-47 (16).png-32a2bd7f748ca504d33420fb3ac13518.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0
