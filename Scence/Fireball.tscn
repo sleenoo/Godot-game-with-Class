@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://9b8d336fe8b4035d/Ïº+å+à+èÏ¦+å/+äÏºÏ¦Ï¿/Untitled 08-18-2022 12-15-43 (1).png" type="Texture" id=1]
+[ext_resource path="res://9b8d336fe8b4035d/Ïº+å+à+èÏ¦+å/+äÏºÏ¦Ï¿/Untitled 08-18-2022 12-15-43 (2).png" type="Texture" id=2]
+[ext_resource path="res://9b8d336fe8b4035d/Ïº+å+à+èÏ¦+å/+äÏºÏ¦Ï¿/Untitled 08-18-2022 12-15-43.png" type="Texture" id=3]
+[ext_resource path="res://Scence/Fireball.gd" type="Script" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Shoot",
+"speed": 12.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 8.0
+
+[node name="Fireball" type="Area2D" groups=["Enemy", "Fireball", "fireball"]]
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="." groups=["Enemy", "Fireball"]]
+scale = Vector2( 0.0697022, 0.0697022 )
+frames = SubResource( 1 )
+animation = "Shoot"
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Enemy", "Fireball"]]
+shape = SubResource( 2 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." groups=["Enemy", "Fireball"]]
+
+[connection signal="body_entered" from="." to="." method="_on_Fireball_body_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

@@ -1,0 +1,226 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://PressStart2P-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Menu.gd" type="Script" id=2]
+[ext_resource path="res://Scence/Thumbnail game.png" type="Texture" id=3]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 1
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="StyleBoxFlat" id=31]
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="StyleBoxEmpty" id=13]
+
+[sub_resource type="CanvasItemMaterial" id=3]
+blend_mode = 1
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxFlat" id=17]
+
+[sub_resource type="StyleBoxEmpty" id=18]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="CanvasItemMaterial" id=5]
+blend_mode = 1
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=19]
+
+[sub_resource type="StyleBoxFlat" id=20]
+
+[sub_resource type="StyleBoxEmpty" id=21]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=22]
+
+[sub_resource type="StyleBoxFlat" id=23]
+
+[sub_resource type="StyleBoxEmpty" id=24]
+
+[sub_resource type="StyleBoxEmpty" id=25]
+
+[sub_resource type="StyleBoxFlat" id=26]
+
+[sub_resource type="StyleBoxEmpty" id=27]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="DynamicFont" id=28]
+font_data = ExtResource( 1 )
+
+[sub_resource type="Environment" id=29]
+background_mode = 4
+background_energy = 0.0
+fog_color = Color( 0.356863, 0.4, 0.443137, 1 )
+fog_sun_color = Color( 1, 0.901961, 0.701961, 1 )
+glow_enabled = true
+glow_intensity = 0.15
+glow_strength = 0.82
+glow_bloom = 0.1
+glow_blend_mode = 0
+glow_hdr_threshold = 2.28
+glow_hdr_luminance_cap = 35.36
+glow_hdr_scale = 4.0
+glow_bicubic_upscale = true
+glow_high_quality = true
+adjustment_enabled = true
+adjustment_brightness = 1.1
+adjustment_contrast = 0.9
+adjustment_saturation = 0.9
+
+[sub_resource type="ParticlesMaterial" id=30]
+lifetime_randomness = 0.39
+emission_shape = 1
+emission_sphere_radius = 128.0
+flag_align_y = true
+flag_rotate_y = true
+flag_disable_z = true
+direction = Vector3( 1, -10, 0 )
+spread = 180.0
+flatness = 0.84
+gravity = Vector3( 10, -10, 0 )
+initial_velocity_random = 0.51
+angular_velocity = -720.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color = Color( 0, 0.964706, 1, 1 )
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 2.0
+margin_bottom = 2.0
+script = ExtResource( 2 )
+
+[node name="ThumbnailGame" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.952941 )
+position = Vector2( 487, 305 )
+scale = Vector2( 0.866687, 0.887397 )
+texture = ExtResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -460.0
+margin_top = -72.0
+margin_right = -183.0
+margin_bottom = 251.0
+rect_scale = Vector2( 3.25719, 3.94469 )
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+material = SubResource( 1 )
+margin_right = 277.0
+margin_bottom = 16.0
+custom_colors/font_color = Color( 0.333333, 1, 0.815686, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 31 )
+custom_styles/focus = SubResource( 15 )
+custom_styles/normal = SubResource( 13 )
+text = "PLAY"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+material = SubResource( 3 )
+margin_top = 20.0
+margin_right = 277.0
+margin_bottom = 36.0
+custom_colors/font_color = Color( 1, 0.380392, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/focus = SubResource( 18 )
+custom_styles/normal = SubResource( 8 )
+text = "OPTIONS"
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+material = SubResource( 5 )
+margin_top = 40.0
+margin_right = 277.0
+margin_bottom = 56.0
+custom_colors/font_color = Color( 0.964706, 1, 0, 1 )
+custom_fonts/font = SubResource( 6 )
+custom_styles/hover = SubResource( 19 )
+custom_styles/pressed = SubResource( 20 )
+custom_styles/focus = SubResource( 21 )
+custom_styles/normal = SubResource( 9 )
+text = "TUTORIAL"
+
+[node name="Button5" type="Button" parent="VBoxContainer"]
+self_modulate = Color( 0.352941, 0.815686, 1, 1 )
+material = SubResource( 5 )
+margin_top = 60.0
+margin_right = 277.0
+margin_bottom = 76.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/hover = SubResource( 22 )
+custom_styles/pressed = SubResource( 23 )
+custom_styles/focus = SubResource( 24 )
+custom_styles/normal = SubResource( 9 )
+text = "CREDITS"
+
+[node name="Button4" type="Button" parent="VBoxContainer"]
+self_modulate = Color( 1, 0, 0, 1 )
+material = SubResource( 5 )
+margin_top = 80.0
+margin_right = 277.0
+margin_bottom = 96.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/hover = SubResource( 25 )
+custom_styles/pressed = SubResource( 26 )
+custom_styles/focus = SubResource( 27 )
+custom_styles/normal = SubResource( 10 )
+text = "QUIT"
+
+[node name="Label" type="Label" parent="."]
+visible = false
+anchor_right = 1.0
+margin_left = -1516.0
+margin_top = -222.0
+margin_right = -1516.0
+margin_bottom = -80.0
+rect_scale = Vector2( 4, 4 )
+custom_colors/font_color = Color( 0.419608, 1, 0.760784, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1084
+custom_constants/line_spacing = 1414
+custom_constants/shadow_offset_y = 318
+custom_constants/shadow_as_outline = 296
+custom_fonts/font = SubResource( 28 )
+text = "THE 3000 YEARS"
+align = 1
+valign = 1
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 29 )
+
+[node name="Particles2D2" type="Particles2D" parent="WorldEnvironment"]
+position = Vector2( 500, 356 )
+scale = Vector2( 4.86247, 4.96 )
+process_material = SubResource( 30 )
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button5" to="." method="_on_Button5_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_Button4_pressed"]
